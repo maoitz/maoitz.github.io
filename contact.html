@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karl Almstedt | Contact</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script src="/js/easteregg.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="main-nav">
+        <ul>
+          <li>
+            <a href="index.html" class="nav-link"
+              ><i class="fas fa-home"></i
+            ></a>
+          </li>
+          <li>
+            <a href="about.html" class="nav-link"
+              ><i class="fas fa-user"></i
+            ></a>
+          </li>
+          <li>
+            <a href="portfolio.html" class="nav-link"
+              ><i class="fas fa-briefcase"></i
+            ></a>
+          </li>
+          <li>
+            <a href="expertise.html" class="nav-link"
+              ><i class="fas fa-code"></i
+            ></a>
+          </li>
+          <li>
+            <a href="contact.html" class="nav-link current"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="animate">
+      <section class="contact-section">
+        <div class="contact-info">
+          <h1 class="section-title">Contact Me</h1>
+        </div>
+      </section>
+
+      <section class="contact-grid">
+        <div class="contact-form">
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input
+              type="hidden"
+              name="apikey"
+              value="8e20871e-3e03-41fe-9d68-2154547bc6f3"
+            />
+
+            <input
+              type="hidden"
+              name="subject"
+              value="New Submission from Web3Forms"
+            />
+
+            <input type="hidden" name="from_name" value="CV Website" />
+
+            <input type="hidden" name="replyto" value="customer@example.com" />
+
+            <!-- Submit Confirmation -->
+            <input
+              type="hidden"
+              name="redirect"
+              value="https://web3forms.com/success"
+            />
+
+            <!-- Prevent Bot-spam -->
+            <input
+              type="checkbox"
+              name="botcheck"
+              id=""
+              style="display: none"
+            />
+
+            <!-- Custom Form Data: -->
+
+            <div class="form-row">
+              <div class="form-column1">
+                <label for="name">Your Name:</label>
+              </div>
+              <div class="form-column2">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Full Name"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-column1">
+                <label for="email">Your E-mail:</label>
+              </div>
+              <div class="form-column2">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="example@gmail.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-column1">
+                <label for="message">Message:</label>
+              </div>
+              <div class="form-column2">
+                <textarea
+                  name="message"
+                  style="height: 200px"
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Almstedt. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
