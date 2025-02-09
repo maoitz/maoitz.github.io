@@ -1,0 +1,83 @@
+/* Print Styles for Resume/About Me */
+@media print {
+  body {
+    background: white;
+    color: black;
+    margin: 0;
+    padding: 20px;
+    font-size: 12pt;
+  }
+
+  header,
+  footer {
+    display: none;
+  }
+
+  main {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 18pt;
+  }
+
+  h2 {
+    font-size: 14pt;
+  }
+
+  h3 {
+    font-size: 14pt;
+  }
+
+  p {
+    font-size: 12pt;
+  }
+
+  .profile-picture {
+    display: none;
+  }
+
+  .about-content {
+    max-width: none;
+  }
+
+  .about-header h1 {
+    color: black;
+    font-size: 12pt;
+  }
+
+  .about-header .tagline {
+    color: #333;
+  }
+
+  .skill-category,
+  .education-item,
+  .story-content {
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    break-inside: avoid;
+  }
+
+  .skill-category h3,
+  .education-item h3 {
+    color: #333;
+    font-size: 12pt;
+  }
+
+  .education-item p {
+    font-size: 12pt;
+  }
+
+  .skill-category ul li::before {
+    color: #333;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
