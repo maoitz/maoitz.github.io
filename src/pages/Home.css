@@ -1,0 +1,144 @@
+.home-page {
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 60px;
+    max-width: 1200px; /* Adjust as needed */
+}
+
+.home-header {
+    display: flex;
+    gap: 20px;
+}
+
+.home-image {
+    max-width: 500px;
+    max-height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.home-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+    max-width: 600px;
+    width: 100%;
+}
+
+.home-title {
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+.home-description {
+    font-size: 1.2rem;
+    color: #ff4444;
+}
+
+.home-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.home-link {
+    color: #666;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.home-link:hover {
+    color: #ff4444;
+    transform: scale(1.1);
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.service-card {
+    color: #fff;
+    padding: 15px;
+    text-align: left;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+.service-card .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff4444;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #999;
+}
+
+@media screen and (max-width: 960px) {
+    .home-page {
+        margin-left: 100px;
+        margin-right: 20px;
+    }
+
+    .home-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-content {
+        padding: 10px;
+    }
+
+    .home-title {
+        font-size: 2.5rem;
+    }
+
+    .home-description {
+        font-size: 1rem;
+    }
+
+    .service-list {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .home-image {
+        display: none;
+    }
+}

@@ -1,0 +1,94 @@
+/* Specific styling for Print */
+@media print {
+  .about-me-header h1,
+  .about-me-header p {
+    color: black;
+  }
+
+  .about-me-header h1 {
+    border-bottom: 1px solid black;
+  }
+
+  .about-me-image {
+    border: none;
+    margin-top: 2rem;
+  }
+
+  .about-me-page {
+    margin-left: 0;
+    margin-right: 0;
+    gap: 0;
+    padding: 0;
+  }
+
+  .cv-container {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .cv-about-content,
+  .cv-skill-item,
+  .cv-education-item,
+  .cv-interest-item {
+    padding: 1rem;
+    border-radius: 0;
+  }
+
+  .cv-about-content p,
+  .cv-skill-keywords li,
+  .cv-education-dates,
+  .cv-education-link {
+    color: black;
+  }
+
+  body {
+    color: black;
+    background: white;
+  }
+
+  .cv-section-title,
+  .cv-skill-name,
+  .cv-education-title,
+  .cv-interest-title {
+    color: black;
+  }
+
+  .cv-skill-keywords li::before {
+    color: black;
+  }
+
+  .cv-education-dates,
+  .cv-education-link,
+  .cv-about-content a {
+    color: black;
+    font-style: normal;
+  }
+
+  .cv-about-content:hover,
+  .cv-skill-item:hover,
+  .cv-education-item:hover,
+  .cv-interest-item:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .cv-skills-grid {
+    display: block;
+  }
+
+  .cv-section {
+    page-break-inside: avoid;
+  }
+
+  .cv-section-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar,
+  .footer,
+  .sidebar,
+  .cv-loading {
+    display: none;
+  }
+}

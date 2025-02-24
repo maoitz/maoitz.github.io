@@ -1,0 +1,27 @@
+.skills-page {
+  margin-left: 100px;
+  margin-right: 50px;
+}
+
+.skills-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.skills-header-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ff4444;
+    width: 80%;
+}
+
+.skills-header-description {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}

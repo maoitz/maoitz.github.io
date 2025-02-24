@@ -1,0 +1,195 @@
+/* CSS for CV */
+.cv-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Section styles */
+.cv-section {
+  margin-bottom: 2rem;
+}
+
+.cv-section-title {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  
+}
+
+/* About styles */
+.cv-about-content {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.cv-about-content:hover {
+  transform: scale(1.02);
+}
+
+.cv-about-content p {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.cv-about-content a {
+  color: #ff4444;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.cv-about-content a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 960px) {
+  .cv-about-content {
+    font-size: small;
+  }
+  
+}
+
+/* Skills styles */
+.cv-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 960px) {
+  .cv-skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cv-skill-item {
+  outline: none;
+  background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.cv-skill-item:hover {
+  box-shadow: 0 0 5px #ff4444;
+  transform: scale(1.02);
+}
+
+.cv-skill-name {
+  color: #ff4444;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.cv-skill-keywords {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cv-skill-keywords li {
+  margin-bottom: 10px;
+  color: #fff;
+  position: relative;
+  padding-left: 20px;
+}
+
+.cv-skill-keywords li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #ff4444;
+}
+
+.cv-skill-keyword {
+  color: #fff;
+}
+
+/* Education styles */
+.cv-education-item {
+  outline: none;
+  background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.cv-education-item:hover {
+  box-shadow: 0 0 5px #ff4444;
+  transform: scale(1.02);
+}
+
+@media (min-width: 960px) {
+  .cv-education-header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.cv-education-title {
+  font-size: 1.4rem;
+  color: #ff4444;
+}
+
+.cv-education-dates {
+  color: #999;
+  margin-bottom: 15px;
+  
+}
+
+.cv-education-link {
+  color: #fff;
+  font-style: italic;
+}
+
+.cv-education-link:hover {
+  text-decoration: none;
+  color: #ff4444;
+}
+
+/* Interests Styles */
+
+.cv-interest-item {
+  outline: none;
+  background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.cv-interest-item:last-child {
+  margin-bottom: 0;
+}
+
+.cv-interest-item:hover {
+  box-shadow: 0 0 5px #ff4444;
+  transform: scale(1.02);
+}
+
+.cv-interest-title {
+  font-size: 1.2rem;
+  color: #ff4444;
+  margin-bottom: 5px;
+}
+
+.cv-interest-keywords {
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* Loading state */
+.cv-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

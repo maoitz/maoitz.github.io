@@ -1,0 +1,37 @@
+{
+  "skills": [
+    {
+      "name": "Frontend",
+      "keywords": ["HTML5/CSS3", "JavaScript", "React.js"]
+    },
+    {
+      "name": "Backend",
+      "keywords": [".NET Core", "C#", "Python", "SQL"]
+    },
+    {
+      "name": "Tools & Methods",
+      "keywords": ["Git/GitHub", "Agile Development", "Docker"]
+    }
+  ],
+
+  "education": [
+    {
+      "institution": "Chas Academy",
+      "area": "Fullstack Web Development",
+      "startDate": "2024-09",
+      "endDate": "2026-05",
+      "link": "https://chasacademy.se/program/fullstackutvecklare-net"
+    }
+  ],
+
+  "interests": [
+    {
+      "name": "[Placeholder Title]",
+      "keywords": ["[Placeholder Keyword]"]
+    },
+    {
+      "name": "[Placeholder Title]",
+      "keywords": ["[Placeholder Keyword]"]
+    }
+  ]
+}
