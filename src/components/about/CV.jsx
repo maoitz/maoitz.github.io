@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import cvData from "../../data/cv.json";
 import "./CV.css";
 
+
+
 const CV = () => {
   // State to store the CV data
   const [cv, setCv] = useState(null);
@@ -28,33 +30,23 @@ const CV = () => {
 
   return (
     <div className="cv-container">
+
       <section className="cv-section">
-        <h2 className="cv-section-title">About Me</h2>
+        <h2 className="cv-section-title">{cv.titles.about}</h2>
         <div className="cv-about-content">
-          <p>
-            I'm currently pursuing a comprehensive .NET development education at{" "}
-            <a href="https://chasacademy.se/">Chas Academy</a>, where I'm
-            learning expertise across the full software development stack. The
-            program provides deep immersion in backend development including
-            Databases and APIs, as well as frontend development with JavaScript
-            with various frameworks and libraries such as React.
-            <br />
-            <br />
-            Throughout the program, I work extensively with C# in combination
-            with these technologies. This education positions me to excel either
-            as a fullstack developer with a strong web focus and thorough
-            understanding of the entire stack, or as a specialized backend
-            developer working with APIs and microservices for enterprise
-            systems. My training emphasizes practical, hands-on experience with
-            modern development tools and methodologies used in today's software
-            industry.
-          </p>
+        {cv.about && cv.about.length > 0 ? (
+        cv.about.map((paragraph, index) => (
+            <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }}/>
+          ))
+        ) : (
+          <p>No data available</p>
+        )}
         </div>
       </section>
 
       {/* {Skills} */}
       <section className="cv-section">
-        <h2 className="cv-section-title">Technical Skills</h2>
+        <h2 className="cv-section-title">{cv.titles.skills}</h2>
         <div className="cv-skills-grid">
           {cv.skills.map((skill, index) => (
             <div key={index} className="cv-skill-item">
@@ -73,7 +65,7 @@ const CV = () => {
 
       {/* {Education} */}
       <section className="cv-section">
-        <h2 className="cv-section-title">Education</h2>
+        <h2 className="cv-section-title">{cv.titles.education}</h2>
         {cv.education.map((education, index) => (
           <div key={index} className="cv-education-item">
             <h3 className="cv-education-title">{education.institution} - {education.area}</h3>
@@ -95,7 +87,7 @@ const CV = () => {
 
       {/* {Personal Interests} */}
       <section className="cv-section">
-        <h2 className="cv-section-title">Personal Interests</h2>
+        <h2 className="cv-section-title">{cv.titles.interests}</h2>
         {cv.interests.map((interest, index) => (
           <div key={index} className="cv-interest-item">
             <h3 className="cv-interest-title">{interest.name}</h3>
