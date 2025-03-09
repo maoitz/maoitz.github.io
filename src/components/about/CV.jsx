@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import cvData from "../../data/cv.json";
 import "./CV.css";
-
-
+import { div, p } from "framer-motion/client";
 
 const CV = () => {
   // State to store the CV data
@@ -30,17 +29,32 @@ const CV = () => {
 
   return (
     <div className="cv-container">
-
       <section className="cv-section">
         <h2 className="cv-section-title">{cv.titles.about}</h2>
         <div className="cv-about-content">
-        {cv.about && cv.about.length > 0 ? (
-        cv.about.map((paragraph, index) => (
-            <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }}/>
-          ))
-        ) : (
-          <p>No data available</p>
-        )}
+          {cv.about && cv.about.length > 0 ? (
+            cv.about.map((paragraph, index) => (
+              <p key={index}>
+                {paragraph.split(/(https?:\/\/[^\s]+)/g).map((part, i) =>
+                  /^https?:\/\//.test(part) ? (
+                    <a
+                      key={i}
+                      href={part}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="cv-about-link"
+                    >
+                      Chas Academy
+                    </a>
+                  ) : (
+                    <span key={i}>{part}</span>
+                  )
+                )}
+              </p>
+            ))
+          ) : (
+            <p>No data available</p>
+          )}
         </div>
       </section>
 
@@ -68,19 +82,25 @@ const CV = () => {
         <h2 className="cv-section-title">{cv.titles.education}</h2>
         {cv.education.map((education, index) => (
           <div key={index} className="cv-education-item">
-            <h3 className="cv-education-title">{education.institution} - {education.area}</h3>
+            <h3 className="cv-education-title">
+              {education.institution} - {education.area}
+            </h3>
             <p className="cv-education-dates">
               {formatDate(education.startDate)} -{" "}
               {formatDate(education.endDate)}
             </p>
-            <a
-              href={education.link}
-              target="_blank"
-              rel="noreferrer"
-              className="cv-education-link"
-            >
-              Read more here
-            </a>
+            {education.link ? (
+              <a
+                href={education.link}
+                target="_blank"
+                rel="noreferrer"
+                className="cv-education-link"
+              >
+                Read more here
+              </a>
+            ) : (
+              <p className="cv-education-link">No link available</p>
+            )}
           </div>
         ))}
       </section>
@@ -91,7 +111,9 @@ const CV = () => {
         {cv.interests.map((interest, index) => (
           <div key={index} className="cv-interest-item">
             <h3 className="cv-interest-title">{interest.name}</h3>
-            <p className="cv-interest-keywords">{interest.keywords.join(", ")}</p>
+            <p className="cv-interest-keywords">
+              {interest.keywords.join(", ")}
+            </p>
           </div>
         ))}
       </section>

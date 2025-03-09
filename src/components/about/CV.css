@@ -35,14 +35,14 @@
   margin-bottom: 1rem;
 }
 
-.cv-about-content a {
+.cv-about-link {
   color: #ff4444;
   margin-bottom: 1rem;
   text-decoration: none;
   font-style: italic;
 }
 
-.cv-about-content a:hover {
+.cv-about-link:hover {
   text-decoration: underline;
 }
 
